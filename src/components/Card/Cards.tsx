@@ -18,7 +18,7 @@ import { fetchAllPeople } from '../../api/people/people';
     
     return(
      
-        <div className="flex flex-wrap -m-4">
+        <div className="flex flex-wrap -m-4 mx-auto">
                 {peoples.map(people => {
                 const formattedHeight = `${people.height} cm`;
                 let image = require(`../../../public/images/${people.name}.jpg`);

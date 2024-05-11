@@ -28,7 +28,7 @@ export function CartProvider(props) {
           return prevItems.map((item) => {
             if(item.id == id) {
               item.qty;
-              item.totalPrice += product.price;
+              item.totalPrice;;
               msg = "Produto já se encontra no carrinho!";
             }
             return item;

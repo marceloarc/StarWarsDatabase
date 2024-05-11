@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <CartProvider>
     <html className="bg-zinc-900" lang="pt-BR">
-      <body className="bg-zinc-900"><Navbar/><section className="bg-zinc-900 md:h-full w-full items-center justify-cente py-24 ">
+      <body className="bg-zinc-900"><Navbar/><section className="bg-zinc-900 md:h-full w-full items-center justify-center py-24 ">
 {children}</section><Footer/></body>
     </html>
     </CartProvider>

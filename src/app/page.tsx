@@ -25,7 +25,7 @@ export default function Home() {
     </div> 
   </div>
   <div className="divider divider-primary mt-20 text-lg">Últimas Noticias</div>
-  <div className="flex items-center justify-center">
+  <div className="flex flex-wrap justify-center -m-4 items-stretch mx-auto">
   <div className="max-w-md bg-white border mx-5 my-5 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <img className="rounded-t-lg" src="https://lumiere-a.akamaihd.net/v1/images/star-wars-mothers-day-gift-guide-collage_tall-ratios-bl_066dd47c.jpeg?region=0%2C0%2C1536%2C864" alt="" />
@@ -76,7 +76,7 @@ export default function Home() {
 </div>
   </div>
   <div className="divider divider-primary mt-20 text-lg">Últimos Videos</div>
-    <div className="flex items-center justify-center">
+    <div className="flex flex-wrap justify-center">
     <div className="max-w-md bg-white mx-5 my-5 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
     <img className="thumb" alt="Teaser Trailer | LEGO Star Wars: Rebuild the Galaxy" data-src="https://lumiere-a.akamaihd.net/v1/images/image_71c7f04d.jpeg?region=0,0,1920,1080" data-width="1920" data-height="1080" data-aspect_ratio="0.5625" data-orientation="landscape" data-legacy="true" src="https://lumiere-a.akamaihd.net/v1/images/image_71c7f04d.jpeg?region=0,0,1920,1080&amp;width=480"/>

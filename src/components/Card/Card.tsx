@@ -16,16 +16,12 @@ export function Card(props: Props){
                 alt="card image"
                 width="0"
                 height="0"
-                sizes="100vw"
+           
                 style={{ width: '100%', height: 500,objectFit: "cover" }}
             />
     </figure>
         <div className="card-body">
             <h2 className="card-title">{props.title}</h2>
-         
-            <div className="card-actions justify-end">
-            <button className="btn bg-sky-950">Mais detalhes</button>
-            </div>
         </div>
         </div>
         </div>
