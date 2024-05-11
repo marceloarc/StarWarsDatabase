@@ -5,7 +5,7 @@ Este é um projeto em react usando nextjs com tailwind
 Primeiramente, instale as dependências com
 
 ```bash
-npm intall
+npm install
 ```
 Depois, execute o servidor de desenvolvimento
 
