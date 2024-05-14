@@ -16,9 +16,9 @@ export function ProductC(props: Props) {
   const [showModal, setShowModal] = useState(false);
   const [msg, setMsg] = useState("");
 
-  function handleAddToCart() {
+  async function handleAddToCart() {
     setShowModal(true);
-    const message = addItemToCart(props.id, 1);
+    const message = await addItemToCart(props.id, 1);
     setMsg(message);
   }
 

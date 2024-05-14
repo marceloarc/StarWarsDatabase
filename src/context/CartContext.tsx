@@ -18,7 +18,7 @@ interface CartContextData {
     totalPrice: number;
   }[]>>;
   getItemsCount: () => number;
-  addItemToCart: (id: number, quantity: number) => string;
+  addItemToCart: (id: number, quantity: number) => Promise<string>;
   getTotalPrice: () => number;
 }
 
@@ -26,40 +26,37 @@ export const CartContext = createContext<CartContextData>({
   items: [],
   setItems: () => {},
   getItemsCount: () => 0,
-  addItemToCart: () => '',
+  addItemToCart: async () => '',
   getTotalPrice: () => 0,
 });
 
 export function CartProvider(props: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartContextData['items']>([]);
 
-  async function addItemToCart(id: number, quantity: number): Promise<string> {
+ async function addItemToCart(id: number, quantity: number): Promise<string> {
     let msg: string = '';
-    const product = await getProduct(id); // Lidar com a Promise de forma assíncrona
+    const product = await getProduct(id);
     setItems(prevItems => {
-      const item = prevItems.find(item => item.id === id);
+      const updatedItems = [...prevItems]; // Criar uma cópia dos itens anteriores
+      const itemIndex = updatedItems.findIndex(item => item.id === id);
 
-      if (!item) {
+      if (itemIndex === -1) {
         msg = 'Produto adicionado ao carrinho!';
-        return [
-          ...prevItems,
-          {
-            id,
-            qty: quantity,
-            product,
-            totalPrice: product.price * quantity,
-          },
-        ];
+        updatedItems.push({
+          id,
+          qty: quantity,
+          product: product!,
+          totalPrice: product!.price * quantity,
+        });
       } else {
         msg = 'Produto já se encontra no carrinho!';
-        return prevItems.map(item => {
-          if (item.id === id) {
-            item.qty += quantity;
-            item.totalPrice += product.price * quantity;
-          }
-          return item;
-        });
+        const updatedItem = { ...updatedItems[itemIndex] };
+        updatedItem.qty += quantity;
+        updatedItem.totalPrice += product!.price * quantity;
+        updatedItems[itemIndex] = updatedItem;
       }
+
+      return updatedItems;
     });
     return msg;
   }

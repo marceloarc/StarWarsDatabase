@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { StaticImageData } from '../../../node_modules/next/image';
 type Props = {
     title: string;
-    image: StaticImageData;
+    image: string;
     description: string;
 };
 export function Card(props: Props) {
