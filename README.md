@@ -7,7 +7,13 @@ Primeiramente, instale as dependências com
 ```bash
 npm install
 ```
-Depois, execute o servidor de desenvolvimento
+Depois, crie um .env com a variavel da api
+
+```bash
+API_BASE_URL=https://swapi.dev/api
+```
+
+E então inicie o projeto com:
 
 ```bash
 npm run dev

@@ -40,7 +40,6 @@ export function Navbar() {
             <summary>INFORMAÇÕES</summary>
             <ul className="p-2  z-50 bg-zinc-950 border-x border-b border-gray-500 rounded-none">
               <li><Link href="/people">PERSONAGENS</Link></li>
-              <li><a>Submenu 2</a></li>
             </ul>
           </details>
         </li>
