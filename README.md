@@ -2,7 +2,7 @@ Este é um projeto em react usando nextjs com tailwind
 
 
 ```bash
-[Live demo(https://star-wars-database-brown.vercel.app/)
+[Live demo](https://star-wars-database-brown.vercel.app/)
 ```
 
 ## Começando
