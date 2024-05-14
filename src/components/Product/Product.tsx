@@ -19,11 +19,11 @@ export function ProductC(props: Props) {
   function handleAddToCart() {
     setShowModal(true);
     const message = addItemToCart(props.id, 1);
-    setMsg(message); 
+    setMsg(message);
   }
 
   return (
-    <div className="relative m-6 flex w-full max-w-xs flex-col overflow-hidden rounded-lg bg-base-100 shadow-md">
+    <div className="relative m-6 flex w-full max-w-xs flex-col overflow-hidden rounded-lg bg-zinc-800/75 shadow-md">
       <a className="mx-auto relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
         <img className="object-cover mx-3 rounded-xl" width={300} src={props.image} alt="product image" />
       </a>
@@ -33,7 +33,7 @@ export function ProductC(props: Props) {
         </a>
         <div className="mt-2 mb-5 flex items-center justify-between">
           <p>
-            <span className="text-3xl font-bold text-white-900">${props.price}</span>
+            <span className="text-3xl font-bold text-white-900">{props.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
           </p>
           <div className="flex items-center">
             {/* Ícones de avaliação */}
@@ -42,7 +42,7 @@ export function ProductC(props: Props) {
         <a
           href="#"
           id={`add-to-cart-${props.id}`}
-          className="flex items-center justify-center rounded-md bg-sky-950 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+          className="flex bg-yellow-400 items-center justify-center rounded-md  px-5 py-2.5 text-center text-sm font-medium text-black hover:bg-yellow-400 focus:outline-none "
           onClick={handleAddToCart}
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">

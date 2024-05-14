@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from 'react';
-import {ProductC} from './Product';
+import { ProductC } from './Product';
 import logo from '../../../public/images/logo.png';
-import {Product} from '../../api/product/types';
+import { Product } from '../../api/product/types';
 import { getProducts } from '../../api/product/product';
 
 
@@ -12,14 +12,14 @@ type Props = {
   show: boolean;
   onClose: () => void;
 };
-  export function Modal(props: Props){
-    const showHideClassName = props.show ? "modal" : "modal hidden";
-    if (!props.show) {
-      return null;
-    }
-    return(
-    <dialog id="my_modal_3" className={showHideClassName} open={props.show}>
-      <div className="modal-box">
+export function Modal(props: Props) {
+  const showHideClassName = props.show ? "modal" : "modal hidden";
+  if (!props.show) {
+    return null;
+  }
+  return (
+    <dialog id="my_modal_3 " className={showHideClassName} open={props.show}>
+      <div className="modal-box bg-zinc-800">
         <form method="dialog">
           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={props.onClose}>✕</button>
         </form>
@@ -28,6 +28,6 @@ type Props = {
       </div>
     </dialog>
 
-    );
+  );
 
-  }
+}
