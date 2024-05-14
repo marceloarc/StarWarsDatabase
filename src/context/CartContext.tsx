@@ -51,8 +51,8 @@ export function CartProvider(props: { children: React.ReactNode }) {
       } else {
         msg = 'Produto já se encontra no carrinho!';
         const updatedItem = { ...updatedItems[itemIndex] };
-        updatedItem.qty += quantity;
-        updatedItem.totalPrice += product!.price * quantity;
+        updatedItem.qty;
+        updatedItem.totalPrice;
         updatedItems[itemIndex] = updatedItem;
       }
 
